@@ -1,0 +1,29 @@
+<%- include('components/head'); %>
+
+<%- include('components/header'); %>
+
+    <div class="container">
+
+        <h1>Adicionar Funcionário</h1>
+        
+        <form action="/funcionarios" method="post">
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" class="form-control" name="nome" id="nome">
+            </div>
+            <div class="form-group">
+                <label for="idade">Idade</label>
+                <input type="text" class="form-control" id="idade" name="idade" />
+            </div>
+            <div class="form-group">
+                <label for="funcao">Função</label>
+                <input type="text" class="form-control" id="funcao" name="funcao" />
+            </div>
+
+            <button type="submit" class="btn btn-primary mb-5">Adicionar</button>
+
+          </form>
+
+    </div>
+
+<%- include('components/footer'); %>

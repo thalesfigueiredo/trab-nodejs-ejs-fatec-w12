@@ -1,0 +1,29 @@
+<%- include('components/head'); %>
+
+<%- include('components/header'); %>
+
+    <div class="container">
+
+        <h1>Adicionar Serviço</h1>
+        
+        <form action="/servicos" method="post">
+            <div class="form-group">
+                <label for="titulo">Título</label>
+                <input type="text" class="form-control" name="titulo" id="titulo">
+            </div>
+            <div class="form-group">
+                <label for="descricao">Descrição</label>
+                <input type="text" class="form-control" id="descricao" name="descricao" />
+            </div>
+            <div class="form-group">
+                <label for="data">Data</label>
+                <input class="form-control" type="datetime-local" id="data" name="data">
+            </div>
+
+            <button type="submit" class="btn btn-primary mb-5">Adicionar</button>
+
+          </form>
+
+    </div>
+
+<%- include('components/footer'); %>

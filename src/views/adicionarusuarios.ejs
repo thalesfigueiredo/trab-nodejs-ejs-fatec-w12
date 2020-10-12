@@ -1,0 +1,57 @@
+<%- include('components/head'); %>
+
+<%- include('components/header'); %>
+
+        <div class="container">
+            <div class="row justify-content-center"  style="margin-top: 150px;">
+                <div class="col-lg-5 col-md-7 col-sm-10">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="text-primary text-center mt-3 mb-4">Novo Usuário</h2>
+
+                            <form action="/usuarios/adicionar" method="post">
+
+                                <div class="form-row align-items-center">
+                                    <label class="sr-only" for="inlineFormInputGroup">Nome</label>
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">@</div>
+                                        </div>
+                                        <input type="text" class="form-control" name="nome" placeholder="Nome" />
+                                    </div>
+
+                                    <label class="sr-only" for="inlineFormInputGroup">E-mail</label>
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">@</div>
+                                        </div>
+                                        <input type="email" class="form-control" name="email" placeholder="E-mail" />
+                                    </div>
+                                    
+                                    <label class="sr-only" for="inlineFormInputGroup">Senha</label>
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">@</div>
+                                        </div>
+                                        <input type="password" class="form-control" name="senha" placeholder="Senha" />
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <button type="submit" class="btn btn-lg btn-primary btn-block">Criar Usuário</button>
+                                    </div>
+
+                                    <div class="input-group mb-2">
+                                        <a href="/">Voltar a tela de login</a>
+                                    </div>
+
+                                </div>
+
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<%- include('components/footer'); %>

@@ -1,0 +1,31 @@
+<%- include('components/head'); %>
+
+<%- include('components/header'); %>
+
+    <div class="container">
+        <h1>Usuários</h1>
+        
+        <a href="usuarios/novo" class="mt-4 btn btn-lg btn-primary">Adicionar Usuário</a>
+
+        <table class="table mt-4 mb-5">
+            <thead>
+                <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Opções</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% usuarios.forEach((el) =>{ %>
+                <tr>
+                    <th scope="row"><%=el.nome %></th>
+                    <td><%=el.email %></td>
+                    <td><a href="usuarios/<%=el.id%>">editar</a> / <a href="usuarios/excluir/<%=el.id%>">excluir</a></td>
+                </tr>
+                <%})%>
+            </tbody>
+        </table>
+
+    </div>
+
+<%- include('components/footer'); %>

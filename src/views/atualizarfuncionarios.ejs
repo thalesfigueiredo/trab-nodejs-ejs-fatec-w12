@@ -1,0 +1,29 @@
+<%- include('components/head'); %>
+
+<%- include('components/header'); %>
+
+    <div class="container">
+
+        <h1>Atualizar Funcionário</h1>
+        
+        <form action="./atualizar/<%=funcionario.id%>" method="post">
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" class="form-control" id="nome" name="nome" value="<%=funcionario.nome%>" />
+            </div>
+            <div class="form-group">
+                <label for="idade">Idade</label>
+                <input type="text" class="form-control" id="idade" name="idade" value="<%=funcionario.idade%>" />
+            </div>
+            <div class="form-group">
+                <label for="funcao">Função</label>
+                <input type="text" class="form-control" id="funcao" name="funcao" value="<%=funcionario.funcao%>" />
+            </div>
+
+            <button type="submit" class="btn btn-primary mb-5">Atualizar</button>
+
+          </form>
+
+    </div>
+
+<%- include('components/footer'); %>
